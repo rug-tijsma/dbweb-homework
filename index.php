@@ -20,7 +20,7 @@ if(isset($_POST['submitq1'])){
                 <input type="radio" name="question1" value="2" />Alice<br />
                 <input type="radio" name="question1" value="3" />John<br />
                 <input type="radio" name="question1" value="4" />Dean<br />
-				<input type="radio" name="question1" value="5" />Jeanne<br />
+                <input type="radio" name="question1" value="5" />Jeanne<br />
                 <input type="submit" name="submitq1" value="Submit" />
         </form>
 <?php
