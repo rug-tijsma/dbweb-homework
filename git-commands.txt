@@ -1,0 +1,7 @@
+git init
+git add
+git commit
+git log
+git config
+git branch multi
+git push dbweb-homework multi
