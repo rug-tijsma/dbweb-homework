@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
         $questionNumber++;
           
         if($questionNumber < sizeof($arrayQ)){
-            ?>
+		?>
 <form action="index.php" method="post">
 <input type="submit" name="nextQuestion" value="Next" />
 <input type="hidden" name="questionNumber" value="<?php echo $questionNumber; ?>" />
@@ -43,7 +43,7 @@ if (($questionNumber == 0 || isset($_POST['nextQuestion'])) && $questionNumber <
         foreach ($arrayA as $i => $value) {
             echo '<input type="radio" name="answer" value="'. ($i+1).'" />'. $value .' <br />';
         }
-        ?>>
+        ?>
 <input type="submit" name="submit" value="Submit" />
 </form>
 <?php
