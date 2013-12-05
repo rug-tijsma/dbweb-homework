@@ -36,17 +36,6 @@ if(isset($_POST['submit'])){
 if (($questionNumber == 0 || isset($_POST['nextQuestion'])) && $questionNumber <= sizeof($arrayQ)){
   
 ?>
-<<<<<<< HEAD
-        <form action="index.php" method="post">
-                Which name starts with an 'a'? <br />
-                <input type="radio" name="question1" value="1" />Bob<br />
-                <input type="radio" name="question1" value="2" />Alice<br />
-                <input type="radio" name="question1" value="3" />John<br />
-                <input type="radio" name="question1" value="4" />Dean<br />
-                <input type="radio" name="question1" value="5" />Jeanne<br />
-                <input type="submit" name="submitq1" value="Submit" />
-        </form>
-=======
 <form action="index.php" method="post">
 <?php echo $arrayQ[$questionNumber];?> <br />
 <input type="hidden" name="questionNumber" value="<?php echo $questionNumber; ?>" />
@@ -57,7 +46,6 @@ if (($questionNumber == 0 || isset($_POST['nextQuestion'])) && $questionNumber <
         ?>
 <input type="submit" name="submit" value="Submit" />
 </form>
->>>>>>> origin/multi
 <?php
 }
 ?>
