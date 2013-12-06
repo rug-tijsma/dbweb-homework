@@ -1,15 +1,13 @@
-INSERT INTO `choice` (`c_number`, `c_text`, `correct`) VALUES
-(1, 'Orange', 1),
-(1, 'Yellow', 0),
-(1, 'Green', 0),
-(2, 'Orange', 0),
-(2, 'Yellow', 1),
-(2, 'Green', 0),
-(3, 'Orange', 0),
-(3, 'Yellow', 0),
-(3, 'Pear', 1),
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(1, 1, 'Orange', 1);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(1, 2, 'Yellow', 0);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(1, 3, 'Green', 0);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(2, 4, 'Orange', 0;
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(2, 5, 'Yellow', 1);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(2, 6, 'Green', 0);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(3, 7, 'Orange', 0);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(3, 8, 'Yellow', 0);
+INSERT INTO choice (q_number, c_number, c_text, correct) VALUES(3, 9, 'Pear', 1);
 
-INSERT INTO `question` (`q_number`, `q_text`) VALUES
-(1, 'The color of an orange is:'),
-(2, 'The color of a banana is:'),
-(3, 'The color of a pear is:'),
+INSERT INTO question (q_number, q_text) VALUES(1, 'What is the color of an orange?');
+INSERT INTO question (q_number, q_text) VALUES(2, 'What is the color of a banana?');
+INSERT INTO question (q_number, q_text) VALUES(3, 'What is the color of a pear?');
