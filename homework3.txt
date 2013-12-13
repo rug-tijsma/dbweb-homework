@@ -1,0 +1,2 @@
+1. You can change your score by altering the value inside the cookie. Furthermore you can cheat refreshing the page. If you answer the question correctly again, you will get the points for it.
+2. The session is server side so you can't edit the value inside the session so you aren't able to cheat.
