@@ -3,7 +3,7 @@ session_start();
 
 include_once("db-config.php");
 try {
-    $db = new PDO("mysql:host=localhost;dbname=dbweb",$username,$password); 
+    $db = new PDO('mysql:host=$host;dbname=$dbname',$username,$password); 
 }	
     catch (PDOException $e){
     echo 'Connection failed: ' . $e->getMessage();
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
     if(isset($_POST['answer'])){
 		$_SESSION['LAST_ACTIVITY'] = time();			
 		$c = 'SELECT correct FROM choice 
-			WHERE c_number = '. $_POST['answer'] . ' AND q_number = '. $_SESSION['currentQ'];
+			WHERE c_number = '. $db->quote($_POST['answer']) . ' AND q_number = '. $db->quote($_SESSION['currentQ']);
 		$res_c = $db->query($c);
 		
 		if (!$res_c) {
@@ -90,9 +90,9 @@ if(isset($_POST['submit'])){
 if ($_SESSION['currentQ'] >= 0 && $_SESSION['currentQ'] <= $res_num_q->rowCount()){
 
 	$q = 'SELECT q_text FROM question 
-		WHERE q_number = ' . $_SESSION['currentQ'];
+		WHERE q_number = ' . $db->quote($_SESSION['currentQ']);
 	$a = 'SELECT c_text, c_number FROM choice
-		WHERE q_number = ' . $_SESSION['currentQ'];;
+		WHERE q_number = ' . $db->quote($_SESSION['currentQ']);
 	$res_q = $db->query($q);
 	$res_a = $db->query($a);
 	
